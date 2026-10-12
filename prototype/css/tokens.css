@@ -1,0 +1,21 @@
+/* Design tokens: única fuente de colores, espaciado y tipografía. */
+:root {
+  --color-bg: #f6f7f9;
+  --color-surface: #ffffff;
+  --color-text: #1b1f24;
+  --color-muted: #5b6470;
+  --color-primary: #2251d1;
+  --color-ok: #1f7a4d;
+  --color-ok-bg: #e3f4ea;
+  --color-warn: #a35c00;
+  --color-warn-bg: #fdf0dc;
+  --color-border: #e1e4e8;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+
+  --radius: 12px;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}

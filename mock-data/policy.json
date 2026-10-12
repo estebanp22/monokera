@@ -1,0 +1,19 @@
+{
+  "insured": { "id": "ASG-001", "name": "Laura Gómez" },
+  "policy": {
+    "id": "POL-2026-0042",
+    "product": "Seguro de hogar",
+    "status": "vigente",
+    "startDate": "2026-01-15",
+    "endDate": "2027-01-14",
+    "monthlyPremium": 48900,
+    "currency": "COP",
+    "coverages": [
+      { "id": "COB-01", "name": "Incendio", "limit": 120000000 },
+      { "id": "COB-02", "name": "Daños por agua", "limit": 30000000 }
+    ],
+    "exclusions": [
+      { "id": "EXC-01", "name": "Desgaste por uso normal" }
+    ]
+  }
+}

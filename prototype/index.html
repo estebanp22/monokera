@@ -1,3 +1,26 @@
 <!doctype html>
-<title>Prototype</title>
-<p>Prototype</p>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Monokera · Prototipo</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <span class="brand">Monokera</span>
+    </header>
+    <main id="view" class="view" tabindex="-1"></main>
+    <nav class="tabbar" aria-label="Navegación principal">
+      <a href="#/resumen">Resumen</a>
+      <a href="#/detalle">Detalle</a>
+      <a href="#/vigencia">Vigencia</a>
+      <a href="#/simulador">Simulador</a>
+      <a href="#/avisos">Avisos</a>
+    </nav>
+  </div>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
