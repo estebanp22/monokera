@@ -3,17 +3,44 @@
   "policy": {
     "id": "POL-2026-0042",
     "product": "Seguro de hogar",
+    "planName": "Hogar Esencial",
+    "insurer": "Seguros Andinos S.A.",
     "status": "vigente",
     "startDate": "2026-01-15",
     "endDate": "2027-01-14",
+    "autoRenew": false,
     "monthlyPremium": 48900,
+    "paymentFrequency": "mensual",
+    "nextPaymentDate": "2026-11-15",
     "currency": "COP",
+    "contentVersion": "1.2.0",
+    "costSharing": {
+      "deductible": { "contentId": "TER-DEDUCIBLE", "percentage": 10, "minimum": 500000 },
+      "copay": { "contentId": "TER-COPAGO", "amountPerService": 30000 },
+      "illustrativeExample": { "lossAmount": 3000000 }
+    },
     "coverages": [
-      { "id": "COB-01", "name": "Incendio", "limit": 120000000 },
-      { "id": "COB-02", "name": "Daños por agua", "limit": 30000000 }
+      { "id": "COB-01", "name": "Incendio y rayo", "icon": "fire", "limit": 120000000, "deductible": "10 %, mínimo $500.000", "contentId": "CNT-COB-01" },
+      { "id": "COB-02", "name": "Daños por agua", "icon": "water", "limit": 30000000, "deductible": "10 %, mínimo $500.000", "contentId": "CNT-COB-02" },
+      { "id": "COB-03", "name": "Hurto con violencia", "icon": "lock", "limit": 15000000, "deductible": "10 %, mínimo $500.000", "contentId": "CNT-COB-03" },
+      { "id": "COB-04", "name": "Responsabilidad civil", "icon": "people", "limit": 50000000, "deductible": "Sin deducible", "contentId": "CNT-COB-04" },
+      { "id": "COB-05", "name": "Asistencia domiciliaria", "icon": "tools", "limit": 1500000, "limitNote": "hasta 4 servicios al año", "deductible": "Sin deducible · copago de $30.000 por servicio", "contentId": "CNT-COB-05" }
     ],
     "exclusions": [
-      { "id": "EXC-01", "name": "Desgaste por uso normal" }
+      { "id": "EXC-01", "name": "Desgaste por uso normal", "relatedCoverageIds": ["COB-01", "COB-02"], "contentId": "CNT-EXC-01" },
+      { "id": "EXC-02", "name": "Filtraciones por falta de mantenimiento", "relatedCoverageIds": ["COB-02"], "contentId": "CNT-EXC-02" },
+      { "id": "EXC-03", "name": "Hurto sin señales de fuerza", "relatedCoverageIds": ["COB-03"], "contentId": "CNT-EXC-03" },
+      { "id": "EXC-04", "name": "Daños intencionales", "relatedCoverageIds": ["COB-01", "COB-02", "COB-03", "COB-04"], "contentId": "CNT-EXC-04" },
+      { "id": "EXC-05", "name": "Daños causados por mascotas", "relatedCoverageIds": ["COB-02", "COB-04"], "contentId": "CNT-EXC-05" }
     ]
+  },
+  "statusRules": {
+    "porVencerDays": 30,
+    "labels": { "vigente": "Activa", "por-vencer": "Próxima a vencer", "vencida": "Vencida" }
+  },
+  "demoScenarios": {
+    "_comment": "Solo para el prototipo: permiten ver los tres estados de HU-08 (#/resumen?estado=...). Los días son relativos a la fecha actual.",
+    "por-vencer": { "daysToEnd": 12 },
+    "vencida": { "daysToEnd": -5 }
   }
 }

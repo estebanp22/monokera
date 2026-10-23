@@ -1,0 +1,208 @@
+{
+  "_comment": "Contenido regulado (ADR-01, ADR-02, HU-12, HU-13, HU-17). Resumen claro y texto literal comparten versión. Los textos literales son borradores ficticios para el prototipo; Legal debe aprobarlos o reemplazarlos.",
+  "clausulado": {
+    "name": "Condiciones generales · Seguro de hogar",
+    "version": "1.2.0",
+    "date": "2026-10-08"
+  },
+  "version": "1.2.0",
+  "units": [
+    {
+      "id": "CNT-COB-01",
+      "type": "cobertura",
+      "version": "1.2.0",
+      "title": "Incendio y rayo",
+      "clearSummary": "Si tu casa o tus cosas se dañan por un incendio o porque cae un rayo, te pagamos la reparación o el reemplazo hasta $120.000.000.",
+      "example": "Un cortocircuito en la cocina quema el mueble y parte del techo. El seguro paga la reparación, menos el deducible.",
+      "literalText": "Cláusula 3.1. La Aseguradora indemnizará las pérdidas o daños materiales que sufran los bienes asegurados como consecuencia directa de incendio, explosión accidental o impacto de rayo, hasta el valor asegurado indicado en la carátula de la póliza y previa aplicación del deducible pactado.",
+      "legalApproval": {
+        "status": "aprobado",
+        "approvedBy": "Área Legal",
+        "date": "2026-10-08"
+      }
+    },
+    {
+      "id": "CNT-COB-02",
+      "type": "cobertura",
+      "version": "1.2.0",
+      "title": "Daños por agua",
+      "clearSummary": "Cubre los daños que causa el agua cuando se rompe o se tapa de forma repentina una tubería, un tanque o un electrodoméstico.",
+      "example": "Se revienta la manguera de la lavadora y se mojan el piso de madera y un mueble. El seguro paga el arreglo, menos el deducible.",
+      "literalText": "Cláusula 3.2. Se amparan los daños materiales causados por agua proveniente de la rotura, desbordamiento o escape accidental y súbito de tuberías, tanques, aparatos o instalaciones hidráulicas del inmueble asegurado, hasta el sublímite indicado en la carátula.",
+      "legalApproval": {
+        "status": "aprobado",
+        "approvedBy": "Área Legal",
+        "date": "2026-10-08"
+      }
+    },
+    {
+      "id": "CNT-COB-03",
+      "type": "cobertura",
+      "version": "1.2.0",
+      "title": "Hurto con violencia",
+      "clearSummary": "Si alguien entra a la fuerza a tu casa y se lleva tus cosas, te pagamos su valor hasta $15.000.000.",
+      "example": "Fuerzan la cerradura de la puerta y se roban el televisor y un computador. Pones la denuncia y el seguro paga, menos el deducible.",
+      "literalText": "Cláusula 3.3. Se amparan las pérdidas de los contenidos asegurados como consecuencia de hurto calificado, entendido como la apropiación con violencia sobre las personas o las cosas, siempre que exista denuncia ante la autoridad competente.",
+      "legalApproval": {
+        "status": "aprobado",
+        "approvedBy": "Área Legal",
+        "date": "2026-10-08"
+      }
+    },
+    {
+      "id": "CNT-COB-04",
+      "type": "cobertura",
+      "version": "1.2.0",
+      "title": "Responsabilidad civil",
+      "clearSummary": "Si sin querer causas un daño a un vecino o a otra persona desde tu casa, el seguro responde por ti hasta $50.000.000.",
+      "example": "Una fuga en tu baño daña el techo del apartamento de abajo. El seguro paga la reparación del vecino.",
+      "literalText": "Cláusula 3.4. La Aseguradora cubre la responsabilidad civil extracontractual en que incurra el asegurado por daños materiales o lesiones causadas a terceros, derivados de la tenencia del inmueble asegurado, hasta el límite indicado en la carátula.",
+      "legalApproval": {
+        "status": "aprobado",
+        "approvedBy": "Área Legal",
+        "date": "2026-10-08"
+      }
+    },
+    {
+      "id": "CNT-COB-05",
+      "type": "cobertura",
+      "version": "1.2.0",
+      "title": "Asistencia domiciliaria",
+      "clearSummary": "Te enviamos un plomero, cerrajero o electricista para emergencias. Tienes 4 servicios al año y pagas $30.000 de copago por cada uno.",
+      "example": "Te quedas por fuera de la casa sin llaves a las 10 p. m. Llamas, llega un cerrajero y solo pagas $30.000.",
+      "literalText": "Anexo de asistencia. Se prestarán servicios de emergencia en plomería, cerrajería, electricidad y vidriería, con un máximo de cuatro (4) eventos por vigencia anual y un límite de $1.500.000 por vigencia, sujetos al pago de un copago por evento.",
+      "legalApproval": {
+        "status": "aprobado",
+        "approvedBy": "Área Legal",
+        "date": "2026-10-08"
+      }
+    },
+    {
+      "id": "CNT-EXC-01",
+      "type": "exclusion",
+      "version": "1.2.0",
+      "title": "Desgaste por uso normal",
+      "clearSummary": "No cubrimos daños que aparecen poco a poco por el paso del tiempo o el uso diario.",
+      "example": "La tubería se oxidó con los años y empezó a gotear. Eso es desgaste, no un accidente, y no está cubierto.",
+      "literalText": "Cláusula 4.1. Se excluyen las pérdidas o daños causados por uso, desgaste natural, deterioro gradual, corrosión, oxidación, humedad progresiva o vicio propio de los bienes.",
+      "legalApproval": {
+        "status": "aprobado",
+        "approvedBy": "Área Legal",
+        "date": "2026-10-08"
+      }
+    },
+    {
+      "id": "CNT-EXC-02",
+      "type": "exclusion",
+      "version": "1.2.0",
+      "title": "Filtraciones por falta de mantenimiento",
+      "clearSummary": "Si el agua entra porque no se hizo el mantenimiento necesario (techo, canales, sellos), el daño no está cubierto.",
+      "example": "La canal del techo lleva meses tapada con hojas y en un aguacero el agua se mete a la sala. No está cubierto.",
+      "literalText": "Cláusula 4.2. Se excluyen los daños por agua derivados de filtraciones, goteras o humedad causadas por falta de mantenimiento, reparación o limpieza de techos, canales, bajantes, sellos o impermeabilizaciones.",
+      "legalApproval": {
+        "status": "aprobado",
+        "approvedBy": "Área Legal",
+        "date": "2026-10-08"
+      }
+    },
+    {
+      "id": "CNT-EXC-03",
+      "type": "exclusion",
+      "version": "1.2.0",
+      "title": "Hurto sin señales de fuerza",
+      "clearSummary": "Si las cosas desaparecen pero no hay señales de que alguien entró a la fuerza, no está cubierto.",
+      "example": "Dejaste la puerta sin seguro y al volver falta la bicicleta, pero la cerradura está intacta. No está cubierto.",
+      "literalText": "Cláusula 4.3. Se excluyen el hurto simple, la desaparición misteriosa y las pérdidas sin evidencia de violencia sobre las personas o las cosas.",
+      "legalApproval": {
+        "status": "aprobado",
+        "approvedBy": "Área Legal",
+        "date": "2026-10-08"
+      }
+    },
+    {
+      "id": "CNT-EXC-04",
+      "type": "exclusion",
+      "version": "1.2.0",
+      "title": "Daños intencionales",
+      "clearSummary": "No cubrimos daños que tú o alguien que vive contigo cause a propósito.",
+      "example": "Alguien de la casa rompe una ventana a propósito durante una discusión. No está cubierto.",
+      "literalText": "Cláusula 4.4. Se excluyen las pérdidas o daños causados con dolo o culpa grave del asegurado, del tomador o de las personas que habiten el inmueble con su consentimiento.",
+      "legalApproval": {
+        "status": "aprobado",
+        "approvedBy": "Área Legal",
+        "date": "2026-10-08"
+      }
+    },
+    {
+      "id": "CNT-EXC-05",
+      "type": "exclusion",
+      "version": "1.2.0",
+      "title": "Daños causados por mascotas",
+      "clearSummary": "Lo que dañen tus mascotas dentro de tu casa no está cubierto.",
+      "example": "Tu perro muerde y rompe la manguera de la lavadora y se moja el piso. No está cubierto.",
+      "literalText": "Cláusula 4.5. Se excluyen los daños causados a los bienes asegurados por animales domésticos de propiedad o bajo la tenencia del asegurado.",
+      "legalApproval": {
+        "status": "en-revision",
+        "approvedBy": null,
+        "date": null,
+        "note": "Legal revisa si aplica también a responsabilidad civil (INC-01)."
+      }
+    },
+    {
+      "id": "TER-DEDUCIBLE",
+      "type": "termino",
+      "version": "1.2.0",
+      "title": "Deducible",
+      "clearSummary": "Es la parte de la pérdida que pagas tú. En tu póliza es el 10 % del daño, y nunca menos de $500.000.",
+      "example": "Si el daño cuesta $3.000.000, tú pagas $500.000 (porque el 10 %, $300.000, es menor que el mínimo) y el seguro paga $2.500.000.",
+      "literalText": "Cláusula 6. En toda reclamación se aplicará un deducible del diez por ciento (10 %) del valor de la pérdida indemnizable, con un mínimo de quinientos mil pesos ($500.000) por evento.",
+      "legalApproval": {
+        "status": "aprobado",
+        "approvedBy": "Área Legal",
+        "date": "2026-10-08"
+      }
+    },
+    {
+      "id": "TER-COPAGO",
+      "type": "termino",
+      "version": "1.2.0",
+      "title": "Copago",
+      "clearSummary": "Es un valor fijo que pagas cada vez que usas un servicio de asistencia. En tu póliza son $30.000 por servicio.",
+      "example": "Pides un plomero por una fuga. Pagas $30.000 y el seguro cubre el resto del servicio.",
+      "literalText": "Anexo de asistencia, numeral 5. El asegurado pagará al proveedor un copago de treinta mil pesos ($30.000) por cada evento de asistencia solicitado.",
+      "legalApproval": {
+        "status": "aprobado",
+        "approvedBy": "Área Legal",
+        "date": "2026-10-08"
+      }
+    },
+    {
+      "id": "TER-PRIMA",
+      "type": "termino",
+      "version": "1.2.0",
+      "title": "Prima",
+      "clearSummary": "Es lo que pagas por tener el seguro. La tuya es de $48.900 al mes.",
+      "example": "Cada 15 del mes se debitan $48.900 de tu cuenta.",
+      "literalText": "Cláusula 7. La prima se pagará en fracciones mensuales en las fechas indicadas en la carátula. La mora en el pago producirá la terminación automática del contrato conforme al artículo 1068 del Código de Comercio.",
+      "legalApproval": {
+        "status": "aprobado",
+        "approvedBy": "Área Legal",
+        "date": "2026-10-08"
+      }
+    },
+    {
+      "id": "TER-VIGENCIA",
+      "type": "termino",
+      "version": "1.2.0",
+      "title": "Vigencia",
+      "clearSummary": "Es el periodo en que tu seguro te protege. El tuyo va del 15 de enero de 2026 al 14 de enero de 2027.",
+      "example": "Si algo pasa el 20 de enero de 2027 y no renovaste, no estará cubierto.",
+      "literalText": "Cláusula 2. La vigencia de la póliza es la indicada en la carátula, iniciando a las 00:00 horas de la fecha de inicio y terminando a las 24:00 horas de la fecha de fin.",
+      "legalApproval": {
+        "status": "aprobado",
+        "approvedBy": "Área Legal",
+        "date": "2026-10-08"
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "_comment": "C4 · Simulador (HU-22, HU-24). Solo rangos referenciales validados por actuaría; ningún valor es una tarifa real.",
+  "currency": "COP",
+  "disclaimer": "Estimación referencial no vinculante. No es una oferta ni una cotización.",
+  "confirmation": "El valor definitivo lo confirma un asesor después de revisar tu vivienda.",
+  "validation": { "validatedBy": "Consultor actuarial externo", "date": "2026-10-06" },
+  "addOns": [
+    {
+      "id": "AMP-TERREMOTO",
+      "name": "Terremoto",
+      "icon": "quake",
+      "summary": "Cubre los daños de tu vivienda por sismo o temblor.",
+      "today": "No incluido",
+      "withAddOn": "Hasta $180.000.000",
+      "monthlyRange": { "min": 18000, "max": 26000 }
+    },
+    {
+      "id": "AMP-MASCOTAS",
+      "name": "Daños por mascotas",
+      "icon": "paw",
+      "summary": "Cubre lo que tus mascotas dañen dentro de la casa.",
+      "today": "Excluido",
+      "withAddOn": "Hasta $5.000.000",
+      "monthlyRange": { "min": 6000, "max": 9000 }
+    },
+    {
+      "id": "AMP-HURTO",
+      "name": "Más límite en hurto",
+      "icon": "lock",
+      "summary": "Sube el valor que te pagamos si te roban con violencia.",
+      "today": "Hasta $15.000.000",
+      "withAddOn": "Hasta $30.000.000",
+      "monthlyRange": { "min": 9000, "max": 13000 }
+    },
+    {
+      "id": "AMP-EQUIPOS",
+      "name": "Equipos fuera de casa",
+      "icon": "laptop",
+      "summary": "Cubre tu portátil y celular si se dañan o te los roban fuera de casa.",
+      "today": "No incluido",
+      "withAddOn": "Hasta $6.000.000",
+      "monthlyRange": { "min": 11000, "max": 15000 }
+    }
+  ]
+}

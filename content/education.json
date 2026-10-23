@@ -1,0 +1,24 @@
+{
+  "_comment": "C5 · Mensajes educativos. No tienen pestaña propia: cada uno indica la pantalla donde aparece (placement).",
+  "version": "1.0.0",
+  "messages": [
+    {
+      "id": "EDU-01",
+      "placement": "resumen",
+      "title": "¿Qué hago si pasa algo en mi casa?",
+      "body": "Toma fotos del daño, evita que empeore (por ejemplo, cierra la llave del agua) y repórtalo en las primeras 72 horas."
+    },
+    {
+      "id": "EDU-02",
+      "placement": "detalle",
+      "title": "Lo que no cubre importa tanto como lo que cubre",
+      "body": "Antes de reportar un daño, revisa si tu caso aparece en la lista de exclusiones. Así evitas sorpresas."
+    },
+    {
+      "id": "EDU-03",
+      "placement": "simulador",
+      "title": "Amplía según tus riesgos reales",
+      "body": "Piensa en lo que de verdad podría pasarle a tu vivienda. Por ejemplo, el Eje Cafetero es zona de riesgo sísmico."
+    }
+  ]
+}
