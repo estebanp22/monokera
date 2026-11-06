@@ -1,0 +1,253 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1650" viewBox="0 0 2400 1650">
+<defs><marker id="a_gr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#595959"/></marker><marker id="a_mo" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5B3F8C"/></marker></defs>
+<rect width="2400" height="1650" fill="#FFFFFF"/>
+<text x="40" y="46" font-family="Liberation Sans" font-size="30" fill="#1F4E79" text-anchor="start" font-weight="bold">Arquitectura de la app complementaria Monokera</text>
+<text x="40" y="74" font-family="Liberation Sans" font-size="16" fill="#595959" text-anchor="start">Caso 10 · Modelo de arquitectura (D-01) · Vista detallada por capas · Prototipo navegable y propuesta de versión productiva</text>
+<rect x="40" y="95" width="1920" height="150" rx="16" fill="#FAFAFA" stroke="#595959" stroke-width="2.2"/>
+<text x="60" y="127" font-family="Liberation Sans" font-size="19" fill="#595959" text-anchor="start" font-weight="bold">1. ACTORES</text>
+<rect x="60.0" y="135" width="452.0" height="95" rx="10" fill="#FFFFFF" stroke="#595959" stroke-width="1.6"/>
+<text x="74.0" y="162" font-family="Liberation Sans" font-size="16" fill="#1C2430" text-anchor="start" font-weight="bold">Asegurado</text>
+<text x="74.0" y="186" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Persona con póliza activa emitida por la plataforma</text>
+<text x="74.0" y="206" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Usa la app desde su celular (iOS o Android)</text>
+<rect x="536.0" y="135" width="452.0" height="95" rx="10" fill="#FFFFFF" stroke="#595959" stroke-width="1.6"/>
+<text x="550.0" y="162" font-family="Liberation Sans" font-size="16" fill="#1C2430" text-anchor="start" font-weight="bold">Área Legal de Monokera</text>
+<text x="550.0" y="186" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Aprueba cada texto contractual (MC-###)</text>
+<text x="550.0" y="206" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Lista de verificación de 24 criterios</text>
+<rect x="1012.0" y="135" width="452.0" height="95" rx="10" fill="#FFFFFF" stroke="#595959" stroke-width="1.6"/>
+<text x="1026.0" y="162" font-family="Liberation Sans" font-size="16" fill="#1C2430" text-anchor="start" font-weight="bold">Área Actuarial de Monokera</text>
+<text x="1026.0" y="186" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Aprueba la tabla de rangos del simulador</text>
+<text x="1026.0" y="206" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Prohíbe exponer tarifas reales (RN-03)</text>
+<rect x="1488.0" y="135" width="452.0" height="95" rx="10" fill="#FFFFFF" stroke="#595959" stroke-width="1.6"/>
+<text x="1502.0" y="162" font-family="Liberation Sans" font-size="16" fill="#1C2430" text-anchor="start" font-weight="bold">Producto y Marketing</text>
+<text x="1502.0" y="186" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Nomenclatura oficial de estados de póliza</text>
+<text x="1502.0" y="206" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Revisan contenido y flujos del prototipo</text>
+<rect x="40" y="285" width="1920" height="605" rx="16" fill="#F4F8FC" stroke="#1F4E79" stroke-width="2.2"/>
+<text x="60" y="317" font-family="Liberation Sans" font-size="19" fill="#1F4E79" text-anchor="start" font-weight="bold">2. APP MÓVIL COMPLEMENTARIA · prototipo navegable de alta fidelidad (construido)</text>
+<text x="60" y="345" font-family="Liberation Sans" font-size="16" fill="#1F4E79" text-anchor="start" font-weight="bold">2.1 Capa de presentación · 45 pantallas · barra de navegación de 5 pestañas y perfil</text>
+<rect x="60.0" y="357" width="300.0" height="128" rx="10" fill="#FFFFFF" stroke="#1F4E79" stroke-width="1.6"/>
+<text x="74.0" y="384" font-family="Liberation Sans" font-size="16" fill="#1F4E79" text-anchor="start" font-weight="bold">Inicio</text>
+<text x="74.0" y="408" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">E1, E3 · 5 pantallas</text>
+<text x="74.0" y="428" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Bienvenida e inicio de sesión</text>
+<text x="74.0" y="448" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Resumen y selector de pólizas</text>
+<text x="74.0" y="468" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Alerta de vencimiento</text>
+<rect x="376.0" y="357" width="300.0" height="128" rx="10" fill="#FFFFFF" stroke="#1F4E79" stroke-width="1.6"/>
+<text x="390.0" y="384" font-family="Liberation Sans" font-size="16" fill="#1F4E79" text-anchor="start" font-weight="bold">Mi póliza</text>
+<text x="390.0" y="408" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">E1, E2, E3 · 18 pantallas</text>
+<text x="390.0" y="428" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Coberturas y exclusiones</text>
+<text x="390.0" y="448" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Prima, deducible y copago</text>
+<text x="390.0" y="468" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Clausulado, vigencia y renovación</text>
+<rect x="692.0" y="357" width="300.0" height="128" rx="10" fill="#FFFFFF" stroke="#1F4E79" stroke-width="1.6"/>
+<text x="706.0" y="384" font-family="Liberation Sans" font-size="16" fill="#1F4E79" text-anchor="start" font-weight="bold">Simulador</text>
+<text x="706.0" y="408" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">E4 · 7 pantallas</text>
+<text x="706.0" y="428" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Ampliar una cobertura</text>
+<text x="706.0" y="448" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Cambiar de plan</text>
+<text x="706.0" y="468" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Comparar y guardar</text>
+<rect x="1008.0" y="357" width="300.0" height="128" rx="10" fill="#FFFFFF" stroke="#1F4E79" stroke-width="1.6"/>
+<text x="1022.0" y="384" font-family="Liberation Sans" font-size="16" fill="#1F4E79" text-anchor="start" font-weight="bold">Aprende</text>
+<text x="1022.0" y="408" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">E5 · 6 pantallas</text>
+<text x="1022.0" y="428" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Glosario</text>
+<text x="1022.0" y="448" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Artículos de prevención</text>
+<text x="1022.0" y="468" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Preguntas frecuentes</text>
+<rect x="1324.0" y="357" width="300.0" height="128" rx="10" fill="#FFFFFF" stroke="#1F4E79" stroke-width="1.6"/>
+<text x="1338.0" y="384" font-family="Liberation Sans" font-size="16" fill="#1F4E79" text-anchor="start" font-weight="bold">Avisos y siniestros</text>
+<text x="1338.0" y="408" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">E6 · 7 pantallas</text>
+<text x="1338.0" y="428" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Avisos y preferencias</text>
+<text x="1338.0" y="448" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Reportar un siniestro</text>
+<text x="1338.0" y="468" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Línea de tiempo del siniestro</text>
+<rect x="1640.0" y="357" width="300.0" height="128" rx="10" fill="#FFFFFF" stroke="#1F4E79" stroke-width="1.6"/>
+<text x="1654.0" y="384" font-family="Liberation Sans" font-size="16" fill="#1F4E79" text-anchor="start" font-weight="bold">Perfil</text>
+<text x="1654.0" y="408" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">E7 · 2 pantallas</text>
+<text x="1654.0" y="428" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Tratamiento de datos</text>
+<text x="1654.0" y="448" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">(Ley 1581 de 2012)</text>
+<text x="1654.0" y="468" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Ajustes de accesibilidad</text>
+<text x="60" y="528" font-family="Liberation Sans" font-size="16" fill="#1F4E79" text-anchor="start" font-weight="bold">2.2 Design System</text>
+<rect x="60" y="540" width="1076" height="112" rx="10" fill="#DDEBF7" stroke="#1F4E79" stroke-width="1.6"/>
+<text x="74" y="567" font-family="Liberation Sans" font-size="16" fill="#1F4E79" text-anchor="start" font-weight="bold">Componentes</text>
+<text x="74" y="591" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">TarjetaResumenPoliza · IndicadorEstado · BloqueDobleCapa · TarjetaCobertura / TarjetaExclusion</text>
+<text x="74" y="611" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">ResumenEconomico · AlertaVencimiento · ResultadoRango · LineaTiempo · ItemAviso</text>
+<text x="74" y="631" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">VentanaGlosario · BarraNavegacion · BotonPrimario / Secundario · CampoFormulario · EstadoVacio</text>
+<rect x="1184" y="540" width="360" height="112" rx="10" fill="#DDEBF7" stroke="#1F4E79" stroke-width="1.6"/>
+<text x="1198" y="567" font-family="Liberation Sans" font-size="16" fill="#1F4E79" text-anchor="start" font-weight="bold">Tokens</text>
+<text x="1198" y="591" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Color: contraste mínimo 4,5:1</text>
+<text x="1198" y="611" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Tipografía: cuerpo de 16 px</text>
+<text x="1198" y="631" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Espaciado 4 a 48 · táctil 44 px</text>
+<rect x="1568" y="540" width="372" height="112" rx="10" fill="#DDEBF7" stroke="#1F4E79" stroke-width="1.6"/>
+<text x="1582" y="567" font-family="Liberation Sans" font-size="16" fill="#1F4E79" text-anchor="start" font-weight="bold">Almacenamiento local</text>
+<text x="1582" y="591" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Simulaciones guardadas (HU-38)</text>
+<text x="1582" y="611" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Preferencias de avisos (HU-34)</text>
+<text x="1582" y="631" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Caché de la póliza consultada</text>
+<text x="60" y="695" font-family="Liberation Sans" font-size="16" fill="#1F4E79" text-anchor="start" font-weight="bold">2.3 Lógica de la app</text>
+<rect x="60.0" y="707" width="300.0" height="160" rx="10" fill="#DDEBF7" stroke="#1F4E79" stroke-width="1.6"/>
+<text x="74.0" y="734" font-family="Liberation Sans" font-size="16" fill="#1F4E79" text-anchor="start" font-weight="bold">Navegación y sesión</text>
+<text x="74.0" y="758" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Rutas por pestaña</text>
+<text x="74.0" y="778" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Máximo 3 toques hasta</text>
+<text x="74.0" y="798" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">cualquier cobertura</text>
+<text x="74.0" y="818" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Estado de la sesión</text>
+<rect x="376.0" y="707" width="300.0" height="160" rx="10" fill="#DDEBF7" stroke="#1F4E79" stroke-width="1.6"/>
+<text x="390.0" y="734" font-family="Liberation Sans" font-size="16" fill="#1F4E79" text-anchor="start" font-weight="bold">Reglas de vigencia</text>
+<text x="390.0" y="758" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Vigente, en gracia, vencida,</text>
+<text x="390.0" y="778" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">cancelada (SC-02)</text>
+<text x="390.0" y="798" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Aviso a 30 días o menos</text>
+<text x="390.0" y="818" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Recordatorios programados</text>
+<rect x="692.0" y="707" width="300.0" height="160" rx="10" fill="#DDEBF7" stroke="#1F4E79" stroke-width="1.6"/>
+<text x="706.0" y="734" font-family="Liberation Sans" font-size="16" fill="#1F4E79" text-anchor="start" font-weight="bold">Motor de doble capa</text>
+<text x="706.0" y="758" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Capa 1: resumen claro</text>
+<text x="706.0" y="778" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">con un ejemplo</text>
+<text x="706.0" y="798" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Capa 2: clausulado literal</text>
+<text x="706.0" y="818" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Textos por ID MC-###</text>
+<rect x="1008.0" y="707" width="300.0" height="160" rx="10" fill="#FBE5D6" stroke="#C55A11" stroke-width="1.6"/>
+<text x="1022.0" y="734" font-family="Liberation Sans" font-size="16" fill="#C55A11" text-anchor="start" font-weight="bold">Lógica del simulador</text>
+<text x="1022.0" y="758" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Consulta bandas por producto</text>
+<text x="1022.0" y="778" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Etiqueta Valor referencial</text>
+<text x="1022.0" y="798" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Aviso: no es una oferta</text>
+<text x="1022.0" y="818" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Nunca calcula tarifas</text>
+<rect x="1324.0" y="707" width="300.0" height="160" rx="10" fill="#DDEBF7" stroke="#1F4E79" stroke-width="1.6"/>
+<text x="1338.0" y="734" font-family="Liberation Sans" font-size="16" fill="#1F4E79" text-anchor="start" font-weight="bold">Validación de formularios</text>
+<text x="1338.0" y="758" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Reporte de siniestro</text>
+<text x="1338.0" y="778" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Preferencias de avisos</text>
+<text x="1338.0" y="798" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Errores que explican</text>
+<text x="1338.0" y="818" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">cómo corregir</text>
+<rect x="1640.0" y="707" width="300.0" height="160" rx="10" fill="#E2EFDA" stroke="#38761D" stroke-width="1.6"/>
+<text x="1654.0" y="734" font-family="Liberation Sans" font-size="16" fill="#38761D" text-anchor="start" font-weight="bold">Registro de consulta</text>
+<text x="1654.0" y="758" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Versión de clausulado vista</text>
+<text x="1654.0" y="778" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Fecha, hora y pantalla</text>
+<text x="1654.0" y="798" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Respaldo ante reclamos</text>
+<text x="1654.0" y="818" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">(HU-36)</text>
+<rect x="40" y="925" width="1920" height="165" rx="16" fill="#FAFAFA" stroke="#595959" stroke-width="2.2"/>
+<text x="60" y="957" font-family="Liberation Sans" font-size="19" fill="#595959" text-anchor="start" font-weight="bold">3. DATOS DEL PROTOTIPO · hoy</text>
+<text x="1940" y="957" font-family="Liberation Sans" font-size="14" fill="#595959" text-anchor="end" font-style="italic">Ocupan el lugar de los servicios reales mientras sea prototipo</text>
+<rect x="60" y="965" width="610.6666666666666" height="110" rx="10" fill="#EDEDED" stroke="#595959" stroke-width="1.6"/>
+<text x="74" y="992" font-family="Liberation Sans" font-size="16" fill="#595959" text-anchor="start" font-weight="bold">mock-data (JSON ficticio)</text>
+<text x="74" y="1016" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">asegurados · polizas · productos</text>
+<text x="74" y="1036" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">siniestros · avisos · rangos</text>
+<text x="74" y="1056" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Cero datos personales y cero tarifas reales</text>
+<rect x="694.6666666666666" y="965" width="610.6666666666666" height="110" rx="10" fill="#E2EFDA" stroke="#38761D" stroke-width="1.6"/>
+<text x="708.6666666666666" y="992" font-family="Liberation Sans" font-size="16" fill="#38761D" text-anchor="start" font-weight="bold">Catálogo de contenido regulado</text>
+<text x="708.6666666666666" y="1016" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Microcopy MC-### aprobado por el Área Legal</text>
+<text x="708.6666666666666" y="1036" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Clausulado oficial por versión</text>
+<text x="708.6666666666666" y="1056" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Glosario, artículos y preguntas frecuentes</text>
+<rect x="1329.3333333333333" y="965" width="610.6666666666666" height="110" rx="10" fill="#FBE5D6" stroke="#C55A11" stroke-width="1.6"/>
+<text x="1343.3333333333333" y="992" font-family="Liberation Sans" font-size="16" fill="#C55A11" text-anchor="start" font-weight="bold">Tabla de rangos referenciales</text>
+<text x="1343.3333333333333" y="1016" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Bandas desde - hasta por producto</text>
+<text x="1343.3333333333333" y="1036" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Aprobada por el Área Actuarial el 16/10/2026</text>
+<text x="1343.3333333333333" y="1056" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Sin tarifas reales (RN-03)</text>
+<rect x="40" y="1125" width="1920" height="300" rx="16" fill="#FCFAFF" stroke="#5B3F8C" stroke-width="2.2" stroke-dasharray="8 5"/>
+<text x="60" y="1157" font-family="Liberation Sans" font-size="19" fill="#5B3F8C" text-anchor="start" font-weight="bold">4. VERSIÓN PRODUCTIVA · propuesta</text>
+<text x="1940" y="1157" font-family="Liberation Sans" font-size="14" fill="#5B3F8C" text-anchor="end" font-style="italic">Fuera del alcance del proyecto: referencia para la siguiente fase</text>
+<rect x="640" y="1160" width="560" height="95" rx="10" fill="#EFE9F7" stroke="#5B3F8C" stroke-width="1.6" stroke-dasharray="8 5"/>
+<text x="654" y="1187" font-family="Liberation Sans" font-size="16" fill="#5B3F8C" text-anchor="start" font-weight="bold">API Gateway / BFF móvil</text>
+<text x="654" y="1211" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Punto único de entrada de la app por HTTPS</text>
+<text x="654" y="1231" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Autorización por token · límites de uso · trazas</text>
+<rect x="1240" y="1160" width="440" height="95" rx="10" fill="#EFE9F7" stroke="#5B3F8C" stroke-width="1.6" stroke-dasharray="8 5"/>
+<text x="1254" y="1187" font-family="Liberation Sans" font-size="16" fill="#5B3F8C" text-anchor="start" font-weight="bold">Autenticación</text>
+<text x="1254" y="1211" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Inicio de sesión del asegurado</text>
+<text x="1254" y="1231" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">OIDC / OAuth 2.0 · doble factor opcional</text>
+<rect x="60.0" y="1300" width="256.57142857142856" height="105" rx="10" fill="#EFE9F7" stroke="#5B3F8C" stroke-width="1.6" stroke-dasharray="8 5"/>
+<text x="74.0" y="1327" font-family="Liberation Sans" font-size="16" fill="#5B3F8C" text-anchor="start" font-weight="bold">Pólizas</text>
+<text x="74.0" y="1351" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Pólizas, coberturas,</text>
+<text x="74.0" y="1371" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">exclusiones, condiciones</text>
+<rect x="330.57142857142856" y="1300" width="256.57142857142856" height="105" rx="10" fill="#EFE9F7" stroke="#5B3F8C" stroke-width="1.6" stroke-dasharray="8 5"/>
+<text x="344.57142857142856" y="1327" font-family="Liberation Sans" font-size="16" fill="#5B3F8C" text-anchor="start" font-weight="bold">Renovación</text>
+<text x="344.57142857142856" y="1351" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Solicitud, cambios</text>
+<text x="344.57142857142856" y="1371" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">y confirmación</text>
+<rect x="601.1428571428571" y="1300" width="256.57142857142856" height="105" rx="10" fill="#EFE9F7" stroke="#5B3F8C" stroke-width="1.6" stroke-dasharray="8 5"/>
+<text x="615.1428571428571" y="1327" font-family="Liberation Sans" font-size="16" fill="#5B3F8C" text-anchor="start" font-weight="bold">Simulador</text>
+<text x="615.1428571428571" y="1351" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Rangos por producto</text>
+<text x="615.1428571428571" y="1371" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">sin cálculo de tarifa</text>
+<rect x="871.7142857142857" y="1300" width="256.57142857142856" height="105" rx="10" fill="#EFE9F7" stroke="#5B3F8C" stroke-width="1.6" stroke-dasharray="8 5"/>
+<text x="885.7142857142857" y="1327" font-family="Liberation Sans" font-size="16" fill="#5B3F8C" text-anchor="start" font-weight="bold">Siniestros</text>
+<text x="885.7142857142857" y="1351" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Aviso, estados</text>
+<text x="885.7142857142857" y="1371" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">y eventos</text>
+<rect x="1142.2857142857142" y="1300" width="256.57142857142856" height="105" rx="10" fill="#EFE9F7" stroke="#5B3F8C" stroke-width="1.6" stroke-dasharray="8 5"/>
+<text x="1156.2857142857142" y="1327" font-family="Liberation Sans" font-size="16" fill="#5B3F8C" text-anchor="start" font-weight="bold">Orquestador de avisos</text>
+<text x="1156.2857142857142" y="1351" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Vencimiento, renovación</text>
+<text x="1156.2857142857142" y="1371" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">y siniestros</text>
+<rect x="1412.8571428571427" y="1300" width="256.57142857142856" height="105" rx="10" fill="#EFE9F7" stroke="#5B3F8C" stroke-width="1.6" stroke-dasharray="8 5"/>
+<text x="1426.8571428571427" y="1327" font-family="Liberation Sans" font-size="16" fill="#5B3F8C" text-anchor="start" font-weight="bold">Contenido regulado</text>
+<text x="1426.8571428571427" y="1351" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Catálogo MC y</text>
+<text x="1426.8571428571427" y="1371" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">clausulado versionado</text>
+<rect x="1683.4285714285713" y="1300" width="256.57142857142856" height="105" rx="10" fill="#EFE9F7" stroke="#5B3F8C" stroke-width="1.6" stroke-dasharray="8 5"/>
+<text x="1697.4285714285713" y="1327" font-family="Liberation Sans" font-size="16" fill="#5B3F8C" text-anchor="start" font-weight="bold">Auditoría</text>
+<text x="1697.4285714285713" y="1351" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Consultas de clausulado</text>
+<text x="1697.4285714285713" y="1371" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">y consentimientos</text>
+<rect x="40" y="1460" width="1920" height="165" rx="16" fill="#FAFAFA" stroke="#595959" stroke-width="2.2"/>
+<text x="60" y="1492" font-family="Liberation Sans" font-size="19" fill="#595959" text-anchor="start" font-weight="bold">5. SISTEMAS EXTERNOS</text>
+<rect x="60.0" y="1500" width="452.0" height="100" rx="10" fill="#EDEDED" stroke="#595959" stroke-width="1.6"/>
+<text x="74.0" y="1527" font-family="Liberation Sans" font-size="16" fill="#1C2430" text-anchor="start" font-weight="bold">Plataforma IaaS Monokera</text>
+<text x="74.0" y="1551" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">API de emisión y administración de pólizas</text>
+<text x="74.0" y="1571" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Operación en Colombia, Perú, Chile y Bolivia</text>
+<rect x="536.0" y="1500" width="452.0" height="100" rx="10" fill="#EDEDED" stroke="#595959" stroke-width="1.6"/>
+<text x="550.0" y="1527" font-family="Liberation Sans" font-size="16" fill="#1C2430" text-anchor="start" font-weight="bold">Aseguradoras partner</text>
+<text x="550.0" y="1551" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Asumen el riesgo de cada producto</text>
+<text x="550.0" y="1571" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Gestionan las reclamaciones</text>
+<rect x="1012.0" y="1500" width="452.0" height="100" rx="10" fill="#EDEDED" stroke="#595959" stroke-width="1.6"/>
+<text x="1026.0" y="1527" font-family="Liberation Sans" font-size="16" fill="#1C2430" text-anchor="start" font-weight="bold">Proveedores de mensajería</text>
+<text x="1026.0" y="1551" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Notificaciones push, correo y SMS</text>
+<text x="1026.0" y="1571" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Solo avisos transaccionales (SC-03)</text>
+<rect x="1488.0" y="1500" width="452.0" height="100" rx="10" fill="#FFFFFF" stroke="#595959" stroke-width="1.6"/>
+<text x="1502.0" y="1527" font-family="Liberation Sans" font-size="16" fill="#1C2430" text-anchor="start" font-weight="bold">Marco regulatorio</text>
+<text x="1502.0" y="1551" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Circulares de la Superintendencia Financiera</text>
+<text x="1502.0" y="1571" font-family="Liberation Sans" font-size="14" fill="#1C2430" text-anchor="start">Ley 1581 · Defensor del Consumidor Financiero</text>
+<rect x="1990" y="285" width="370" height="430" rx="16" fill="#FFF2CC" stroke="#BF9000" stroke-width="2.2"/>
+<text x="2008" y="317" font-family="Liberation Sans" font-size="19" fill="#BF9000" text-anchor="start" font-weight="bold">Requisitos transversales</text>
+<text x="2010" y="350" font-family="Liberation Sans" font-size="15" fill="#1C2430" text-anchor="start">• Accesibilidad WCAG 2.1 AA (HU-28)</text>
+<text x="2010" y="375" font-family="Liberation Sans" font-size="15" fill="#1C2430" text-anchor="start">• Doble capa en toda condición</text>
+<text x="2024" y="400" font-family="Liberation Sans" font-size="15" fill="#1C2430" text-anchor="start">contractual</text>
+<text x="2010" y="425" font-family="Liberation Sans" font-size="15" fill="#1C2430" text-anchor="start">• Cero datos reales y cero tarifas</text>
+<text x="2024" y="450" font-family="Liberation Sans" font-size="15" fill="#1C2430" text-anchor="start">reales en el prototipo</text>
+<text x="2010" y="475" font-family="Liberation Sans" font-size="15" fill="#1C2430" text-anchor="start">• Trazabilidad: pantalla, HU, texto</text>
+<text x="2024" y="500" font-family="Liberation Sans" font-size="15" fill="#1C2430" text-anchor="start">MC-### y versión de clausulado</text>
+<text x="2010" y="525" font-family="Liberation Sans" font-size="15" fill="#1C2430" text-anchor="start">• Solo avisos transaccionales</text>
+<text x="2010" y="550" font-family="Liberation Sans" font-size="15" fill="#1C2430" text-anchor="start">• Estándares de construcción</text>
+<text x="2024" y="575" font-family="Liberation Sans" font-size="15" fill="#1C2430" text-anchor="start">E-01 a E-10</text>
+<text x="2010" y="600" font-family="Liberation Sans" font-size="15" fill="#1C2430" text-anchor="start">• Legal y Actuaría validan antes</text>
+<text x="2024" y="625" font-family="Liberation Sans" font-size="15" fill="#1C2430" text-anchor="start">de construir, no después</text>
+<text x="2010" y="650" font-family="Liberation Sans" font-size="15" fill="#1C2430" text-anchor="start">• Toda pantalla nace del</text>
+<text x="2024" y="675" font-family="Liberation Sans" font-size="15" fill="#1C2430" text-anchor="start">Design System</text>
+<rect x="1990" y="745" width="370" height="345" rx="16" fill="#FFFFFF" stroke="#595959" stroke-width="1.6"/>
+<text x="2008" y="777" font-family="Liberation Sans" font-size="19" fill="#1C2430" text-anchor="start" font-weight="bold">Leyenda</text>
+<rect x="2010" y="798" width="40" height="26" rx="5" fill="#DDEBF7" stroke="#1F4E79" stroke-width="1.6"/>
+<text x="2062" y="817" font-family="Liberation Sans" font-size="15" fill="#1C2430" text-anchor="start">Construido en el prototipo</text>
+<rect x="2010" y="838" width="40" height="26" rx="5" fill="#E2EFDA" stroke="#38761D" stroke-width="1.6"/>
+<text x="2062" y="857" font-family="Liberation Sans" font-size="15" fill="#1C2430" text-anchor="start">Contenido regulado (Legal)</text>
+<rect x="2010" y="878" width="40" height="26" rx="5" fill="#FBE5D6" stroke="#C55A11" stroke-width="1.6"/>
+<text x="2062" y="897" font-family="Liberation Sans" font-size="15" fill="#1C2430" text-anchor="start">Simulador (Actuaría)</text>
+<rect x="2010" y="918" width="40" height="26" rx="5" fill="#EDEDED" stroke="#595959" stroke-width="1.6"/>
+<text x="2062" y="937" font-family="Liberation Sans" font-size="15" fill="#1C2430" text-anchor="start">Datos ficticios y externos</text>
+<rect x="2010" y="958" width="40" height="26" rx="5" fill="#EFE9F7" stroke="#5B3F8C" stroke-width="1.6" stroke-dasharray="8 5"/>
+<text x="2062" y="977" font-family="Liberation Sans" font-size="15" fill="#1C2430" text-anchor="start">Propuesta: versión productiva</text>
+<line x1="2010" y1="1013" x2="2050" y2="1013" stroke="#595959" stroke-width="2" marker-end="url(#a_gr)"/>
+<text x="2062" y="1018" font-family="Liberation Sans" font-size="15" fill="#1C2430" text-anchor="start">Flujo dentro del prototipo</text>
+<line x1="2010" y1="1053" x2="2050" y2="1053" stroke="#5B3F8C" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#a_mo)"/>
+<text x="2062" y="1058" font-family="Liberation Sans" font-size="15" fill="#1C2430" text-anchor="start">Integración futura</text>
+<line x1="286.0" y1="230" x2="286.0" y2="283" stroke="#595959" stroke-width="2" marker-end="url(#a_gr)"/>
+<text x="296.0" y="262" font-family="Liberation Sans" font-size="13" fill="#595959" text-anchor="start" font-style="italic">usa la app</text>
+<line x1="600" y1="485" x2="600" y2="538" stroke="#595959" stroke-width="2" marker-end="url(#a_gr)"/>
+<text x="612" y="518" font-family="Liberation Sans" font-size="13" fill="#595959" text-anchor="start" font-style="italic">se construye con</text>
+<line x1="1160" y1="485" x2="1160" y2="705" stroke="#595959" stroke-width="2" marker-end="url(#a_gr)"/>
+<text x="1172" y="520" font-family="Liberation Sans" font-size="13" fill="#595959" text-anchor="start" font-style="italic">invoca</text>
+<line x1="210.0" y1="867" x2="420" y2="963" stroke="#595959" stroke-width="2" marker-end="url(#a_gr)"/>
+<line x1="526.0" y1="867" x2="600" y2="963" stroke="#595959" stroke-width="2" marker-end="url(#a_gr)"/>
+<text x="330" y="912" font-family="Liberation Sans" font-size="13" fill="#595959" text-anchor="start" font-style="italic">leen pólizas, siniestros y avisos</text>
+<line x1="842.0" y1="867" x2="900" y2="963" stroke="#595959" stroke-width="2" marker-end="url(#a_gr)"/>
+<text x="935" y="912" font-family="Liberation Sans" font-size="13" fill="#595959" text-anchor="start" font-style="italic">resuelve MC-###</text>
+<line x1="1158.0" y1="867" x2="1500" y2="963" stroke="#595959" stroke-width="2" marker-end="url(#a_gr)"/>
+<text x="1360" y="912" font-family="Liberation Sans" font-size="13" fill="#595959" text-anchor="start" font-style="italic">consulta bandas</text>
+<line x1="1790.0" y1="705" x2="1790.0" y2="654" stroke="#595959" stroke-width="2" marker-end="url(#a_gr)"/>
+<text x="1800.0" y="690" font-family="Liberation Sans" font-size="13" fill="#595959" text-anchor="start" font-style="italic">guarda</text>
+<line x1="450" y1="1075" x2="700" y2="1158" stroke="#5B3F8C" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#a_mo)"/>
+<text x="600" y="1112" font-family="Liberation Sans" font-size="13" fill="#5B3F8C" text-anchor="start" font-style="italic">se reemplaza por la API real</text>
+<line x1="920" y1="1255" x2="188.28571428571428" y2="1298" stroke="#5B3F8C" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#a_mo)"/>
+<line x1="920" y1="1255" x2="458.85714285714283" y2="1298" stroke="#5B3F8C" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#a_mo)"/>
+<line x1="920" y1="1255" x2="729.4285714285713" y2="1298" stroke="#5B3F8C" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#a_mo)"/>
+<line x1="920" y1="1255" x2="1000.0" y2="1298" stroke="#5B3F8C" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#a_mo)"/>
+<line x1="920" y1="1255" x2="1270.5714285714284" y2="1298" stroke="#5B3F8C" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#a_mo)"/>
+<line x1="920" y1="1255" x2="1541.1428571428569" y2="1298" stroke="#5B3F8C" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#a_mo)"/>
+<line x1="920" y1="1255" x2="1811.7142857142856" y2="1298" stroke="#5B3F8C" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#a_mo)"/>
+<line x1="1200" y1="1207" x2="1238" y2="1207" stroke="#5B3F8C" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#a_mo)"/>
+<line x1="188.28571428571428" y1="1405" x2="360" y2="1498" stroke="#5B3F8C" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#a_mo)"/>
+<line x1="458.85714285714283" y1="1405" x2="440" y2="1498" stroke="#5B3F8C" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#a_mo)"/>
+<line x1="1000.0" y1="1405" x2="700" y2="1498" stroke="#5B3F8C" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#a_mo)"/>
+<line x1="1270.5714285714284" y1="1405" x2="1180" y2="1498" stroke="#5B3F8C" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#a_mo)"/>
+<line x1="1811.7142857142856" y1="1405" x2="1640" y2="1498" stroke="#5B3F8C" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#a_mo)"/>
+</svg>
