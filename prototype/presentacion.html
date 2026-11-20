@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Monokera · Presentación del prototipo</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: var(--font); color: var(--color-text); background: #e9ecf1; }
+    .wrap { display: grid; grid-template-columns: minmax(300px, 420px) 1fr; gap: 40px; max-width: 1180px; margin: 0 auto; padding: 32px 24px; align-items: start; }
+    aside { position: sticky; top: 24px; max-height: calc(100dvh - 48px); overflow: auto; padding-right: 6px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.1rem; }
+    .brand span { width: 28px; height: 28px; border-radius: 8px; background: var(--color-primary); color: #fff; display: grid; place-items: center; }
+    h1 { font-size: 1.6rem; letter-spacing: -0.02em; margin: 18px 0 6px; line-height: 1.2; }
+    .lead { color: var(--color-muted); margin: 0 0 22px; font-size: 0.95rem; line-height: 1.5; }
+    h2 { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-muted); margin: 22px 0 8px; }
+    ol, ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+    button.step { width: 100%; text-align: left; border: 1px solid transparent; background: #fff; border-radius: 10px; padding: 10px 12px; font: inherit; cursor: pointer; display: grid; grid-template-columns: 34px 1fr; gap: 2px 10px; align-items: start; }
+    button.step:hover { border-color: #b9c8f2; }
+    button.step[aria-current="true"] { border-color: var(--color-primary); box-shadow: 0 0 0 3px var(--color-primary-bg); }
+    .cap { grid-row: span 2; font-size: 0.72rem; font-weight: 800; color: var(--color-primary); background: var(--color-primary-bg); border-radius: 6px; padding: 4px 0; text-align: center; }
+    .t { font-weight: 700; font-size: 0.92rem; }
+    .d { font-size: 0.8rem; color: var(--color-muted); line-height: 1.4; }
+    .stage { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+    .phone { width: 390px; height: 844px; border-radius: 48px; background: #111; padding: 12px; box-shadow: 0 30px 60px -20px rgba(16,24,40,.45); }
+    .phone iframe { width: 100%; height: 100%; border: 0; border-radius: 38px; background: var(--color-bg); }
+    .why { display: none; grid-column: 2; font-size: 0.84rem; line-height: 1.45; margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--color-border); }
+    button.step[aria-current="true"] .why { display: block; }
+    .tools { display: flex; gap: 8px; }
+    .tools a, .tools button { font: inherit; font-size: 0.82rem; font-weight: 600; color: var(--color-primary); background: #fff; border: 1px solid #c9d6f7; border-radius: 8px; padding: 6px 12px; cursor: pointer; text-decoration: none; }
+    :focus-visible { outline: 3px solid var(--color-primary); outline-offset: 2px; }
+    @media (max-width: 900px) {
+      .wrap { grid-template-columns: 1fr; }
+      aside { position: static; max-height: none; }
+      .phone { width: 100%; max-width: 390px; height: 760px; border-radius: 36px; padding: 8px; }
+      .phone iframe { border-radius: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <aside>
+      <div class="brand"><span>M</span>Monokera</div>
+      <h1>Prototipo navegable · gestión de pólizas</h1>
+      <p class="lead">Caso 10 · Seguro de hogar de Laura Gómez. Elige una pantalla o sigue el recorrido; el teléfono es interactivo. Datos, aseguradora y cláusulas son ficticios.</p>
+      <div id="groups"></div>
+    </aside>
+    <div class="stage">
+      <div class="phone"><iframe id="phone" title="Prototipo Monokera" src="index.html#/resumen"></iframe></div>
+      <div class="tools">
+        <button type="button" id="reset">Reiniciar datos</button>
+        <a href="index.html" target="_blank" rel="noopener">Abrir en pantalla completa</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Cada paso: capacidad, título, ruta del prototipo y lo que conviene mostrar en la presentación.
+    const GROUPS = [
+      ["Recorrido de la presentación", [
+        ["C1", "Resumen de la póliza", "/resumen", "HU-07, HU-08", "Estado de cobertura con ícono y texto, cinco datos clave enlazados a su detalle y la reclamación en curso."],
+        ["C1", "Póliza próxima a vencer", "/resumen?estado=por-vencer", "HU-08", "El aviso explica qué pasa si no renueva y lleva directo a la renovación."],
+        ["C2", "Lo que cubre", "/detalle", "HU-12, HU-17", "Cada cobertura en lenguaje claro, con ejemplo y el texto literal de la misma versión."],
+        ["C2", "Lo que no cubre", "/detalle?ver=no-cubre", "HU-13", "Exclusiones con la misma jerarquía que las coberturas. La de mascotas sigue en revisión por Legal y no se publica."],
+        ["C2", "Lo que pagas", "/detalle?ver=pagos", "HU-14", "Prima, deducible y copago, con un ejemplo de cuánto paga cada parte."],
+        ["C3", "Vigencia y renovación", "/vigencia", "HU-15, HU-16", "Fechas completas, días restantes, renovación automática explicada y los tres avisos (30, 15 y 3 días). Prueba «Pedir la renovación»."],
+        ["C3", "Póliza vencida", "/vigencia?estado=vencida", "HU-15", "Sin cobertura: explica desde cuándo y cómo volver a estar protegido."],
+        ["C4", "Simulador de ampliación", "/simulador", "HU-22, HU-24", "Elige coberturas y compara hoy contra la ampliación. Solo rangos referenciales; termina en contacto con un asesor."],
+        ["C6", "Centro de avisos", "/avisos", "HU-26", "Historial con vencimiento, renovación exitosa y fallida. Cada aviso lleva a la pantalla que lo resuelve."],
+        ["C6", "Estado de una reclamación", "/siniestro?id=SIN-2026-0007", "HU-23", "Línea de tiempo por etapas y el documento exacto que falta. Prueba «Subir documento»."],
+        ["C6", "Preferencias de aviso", "/avisos?ver=preferencias", "HU-26", "Canales y temas; los avisos de cobertura son obligatorios."],
+      ]],
+      ["Otros estados", [
+        ["C1", "Resumen con póliza vencida", "/resumen?estado=vencida", "HU-08", "Alerta de falta de cobertura con acción directa."],
+        ["C3", "Vigencia por vencer", "/vigencia?estado=por-vencer", "HU-16", "Avisos de 30 y 15 días ya enviados."],
+        ["C6", "Reclamaciones", "/avisos?ver=siniestros", "HU-23", "Listado con estado en texto e ícono."],
+        ["C6", "Reclamación pagada", "/siniestro?id=SIN-2026-0003", "HU-23", "Cierre con el valor pagado y el copago."],
+        ["C6", "Reclamación no cubierta", "/siniestro?id=SIN-2026-0001", "HU-23, HU-13", "Explica la exclusión aplicada y enlaza a ella; informa cómo pedir revisión."],
+      ]],
+    ];
+
+    const phone = document.getElementById("phone");
+        const groups = document.getElementById("groups");
+    let n = 0;
+    groups.innerHTML = GROUPS.map(([title, steps]) => `
+      <h2>${title}</h2>
+      <ol>${steps.map(([cap, t, route, hu, d]) => `
+        <li><button type="button" class="step" data-route="${route}" >
+          <span class="cap">${cap}</span><span class="t">${t}</span><span class="d">${hu}</span><span class="why"><b>Qué mostrar:</b> ${d}</span>
+        </button></li>`).join("")}</ol>`).join("");
+
+    function select(btn) {
+      document.querySelectorAll(".step").forEach((b) => b.setAttribute("aria-current", String(b === btn)));
+      phone.contentWindow.location.hash = btn.dataset.route;
+    }
+    groups.addEventListener("click", (e) => {
+      const btn = e.target.closest(".step");
+      if (btn) select(btn);
+    });
+    document.getElementById("reset").addEventListener("click", () => {
+      phone.src = "index.html#/resumen";
+      select(document.querySelector(".step"));
+    });
+    phone.addEventListener("load", () => {
+      if (!document.querySelector('.step[aria-current="true"]')) select(document.querySelector(".step"));
+    }, { once: true });
+  </script>
+</body>
+</html>

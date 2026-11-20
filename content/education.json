@@ -1,6 +1,6 @@
 {
   "_comment": "C5 · Mensajes educativos. No tienen pestaña propia: cada uno indica la pantalla donde aparece (placement).",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "messages": [
     {
       "id": "EDU-01",
@@ -19,6 +19,18 @@
       "placement": "simulador",
       "title": "Amplía según tus riesgos reales",
       "body": "Piensa en lo que de verdad podría pasarle a tu vivienda. Por ejemplo, el Eje Cafetero es zona de riesgo sísmico."
+    },
+    {
+      "id": "EDU-04",
+      "placement": "vigencia",
+      "title": "Renovar a tiempo no cuesta más",
+      "body": "Si la renuevas antes del vencimiento no pierdes ni un día de cobertura. Si la dejas vencer, lo que pase desde ese día no está cubierto."
+    },
+    {
+      "id": "EDU-05",
+      "placement": "avisos",
+      "title": "Reporta pronto y guarda los soportes",
+      "body": "Mientras más rápido envíes fotos, facturas y cotizaciones, más rápido avanza tu reclamación."
     }
   ]
 }

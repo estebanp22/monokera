@@ -70,3 +70,47 @@ export function mountClausulado(view) {
     if (e.target === dialog) dialog.close();
   });
 }
+
+// Selector "Solo prototipo" para mostrar los estados de la póliza (HU-08, HU-16) sin cambiar los datos.
+const SCENARIOS = [
+  ["", "Activa"],
+  ["por-vencer", "Por vencer"],
+  ["vencida", "Vencida"],
+];
+
+export function demoSwitch(route, scenario) {
+  return `
+    <nav class="demo" aria-label="Escenario de demostración">
+      <p class="k">Solo prototipo · estado de la póliza</p>
+      <div class="segmented">
+        ${SCENARIOS.map(([key, label]) => `<a href="#${route}${key ? `?estado=${key}` : ""}" ${key === scenario ? 'aria-current="true"' : ""}>${label}</a>`).join("")}
+      </div>
+    </nav>`;
+}
+
+// Hoja inferior genérica (renovación, reporte de siniestro).
+export function sheet(id, title, body) {
+  return `
+    <dialog class="sheet" id="${id}" aria-labelledby="${id}-title">
+      <div class="sheet-head">
+        <h2 id="${id}-title">${title}</h2>
+        <button type="button" class="btn btn--secondary" data-close="${id}" aria-label="Cerrar">${icon("close")}</button>
+      </div>
+      <div class="sheet-body">${body}</div>
+    </dialog>`;
+}
+
+export function mountSheet(view, id) {
+  const dialog = view.querySelector(`#${id}`);
+  view.querySelectorAll(`[data-open="${id}"]`).forEach((btn) => btn.addEventListener("click", () => dialog.showModal()));
+  view.querySelectorAll(`[data-close="${id}"]`).forEach((btn) => btn.addEventListener("click", () => dialog.close()));
+  dialog.addEventListener("click", (e) => {
+    if (e.target === dialog) dialog.close();
+  });
+  return dialog;
+}
+
+// Encabezado de pantalla con regreso explícito (pantallas de segundo nivel).
+export function backLink(href, label) {
+  return `<a class="back" href="${href}">${icon("chev", "i-sm flip")} ${label}</a>`;
+}

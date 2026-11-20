@@ -1,0 +1,111 @@
+{
+  "_comment": "C6 · Historial de notificaciones (HU-26) y avisos de vencimiento (HU-16). Cada notificación enlaza a la pantalla que resuelve la situación (link). Fechas ficticias.",
+  "expiryAlertDays": [30, 15, 3],
+  "notifications": [
+    {
+      "id": "NOT-09",
+      "type": "siniestro",
+      "date": "2026-11-18T16:20:00",
+      "title": "Falta un documento en tu reclamación",
+      "body": "Para seguir con la reclamación SIN-2026-0007 necesitamos la cotización de la reparación del piso.",
+      "link": "#/siniestro?id=SIN-2026-0007",
+      "action": "Subir el documento",
+      "read": false
+    },
+    {
+      "id": "NOT-08",
+      "type": "pago",
+      "date": "2026-11-15T07:00:00",
+      "title": "Recibimos tu pago",
+      "body": "Se debitaron $48.900 de tu cuenta. Tu próximo cobro es el 15 de diciembre.",
+      "link": "#/detalle?ver=pagos",
+      "action": "Ver lo que pagas",
+      "read": false
+    },
+    {
+      "id": "NOT-07",
+      "type": "renovacion",
+      "date": "2026-11-15T08:00:00",
+      "title": "Ya puedes renovar tu póliza",
+      "body": "Tu póliza vence el 14 de enero de 2027. Desde hoy puedes pedir la renovación sin costo adicional.",
+      "link": "#/vigencia",
+      "action": "Ver cómo renovar",
+      "read": true
+    },
+    {
+      "id": "NOT-06",
+      "type": "siniestro",
+      "date": "2026-11-12T09:05:00",
+      "title": "Recibimos tu reclamación",
+      "body": "Registramos la reclamación SIN-2026-0007 por daños por agua. Te avisaremos cada vez que avance.",
+      "link": "#/siniestro?id=SIN-2026-0007",
+      "action": "Ver el estado",
+      "read": true
+    },
+    {
+      "id": "NOT-05",
+      "type": "educativo",
+      "date": "2026-10-05T10:00:00",
+      "title": "Fuga repentina o filtración: no es lo mismo",
+      "body": "Una tubería que se revienta está cubierta; una gotera que lleva meses, no. Te lo explicamos en 1 minuto.",
+      "link": "#/detalle?ver=no-cubre",
+      "action": "Ver lo que no cubre",
+      "read": true
+    },
+    {
+      "id": "NOT-04",
+      "type": "siniestro",
+      "date": "2026-06-03T11:30:00",
+      "title": "Reclamación cerrada y pagada",
+      "body": "Pagamos $150.000 por la reclamación SIN-2026-0003 (asistencia de plomería).",
+      "link": "#/siniestro?id=SIN-2026-0003",
+      "action": "Ver el detalle",
+      "read": true
+    },
+    {
+      "id": "NOT-03",
+      "type": "renovacion-exitosa",
+      "date": "2026-01-14T09:00:00",
+      "title": "Tu póliza se renovó",
+      "body": "Tu seguro de hogar sigue activo del 15 de enero de 2026 al 14 de enero de 2027.",
+      "link": "#/vigencia",
+      "action": "Ver tu vigencia",
+      "read": true
+    },
+    {
+      "id": "NOT-02",
+      "type": "renovacion-fallida",
+      "date": "2026-01-10T08:00:00",
+      "title": "No pudimos renovar tu póliza",
+      "body": "El débito de la primera cuota fue rechazado por tu banco. Actualiza el medio de pago antes del 14 de enero para no quedar sin cobertura.",
+      "link": "#/detalle?ver=pagos",
+      "action": "Revisar el pago",
+      "read": true
+    },
+    {
+      "id": "NOT-01",
+      "type": "vencimiento",
+      "date": "2025-12-15T08:00:00",
+      "title": "Tu póliza vence en 30 días",
+      "body": "Vence el 14 de enero de 2026. Para seguir protegido, pide la renovación antes de esa fecha.",
+      "link": "#/vigencia",
+      "action": "Ver cómo renovar",
+      "read": true
+    }
+  ],
+  "preferences": {
+    "channels": [
+      { "id": "app", "label": "En la app", "detail": "Siempre activo", "enabled": true, "locked": true },
+      { "id": "email", "label": "Correo electrónico", "detail": "l•••••@correo.com", "enabled": true },
+      { "id": "sms", "label": "SMS", "detail": "+57 ••• ••• 4821", "enabled": false },
+      { "id": "push", "label": "Notificaciones push", "detail": "En este teléfono", "enabled": true }
+    ],
+    "topics": [
+      { "id": "vencimiento", "label": "Vencimiento y renovación", "detail": "Te avisamos 30, 15 y 3 días antes de que venza.", "enabled": true, "locked": true },
+      { "id": "siniestro", "label": "Estado de mis reclamaciones", "detail": "Cada vez que tu reclamación avanza o falta un documento.", "enabled": true, "locked": true },
+      { "id": "pago", "label": "Pagos", "detail": "Cobros recibidos y pagos rechazados.", "enabled": true },
+      { "id": "educativo", "label": "Consejos para usar tu seguro", "detail": "Uno al mes, como máximo.", "enabled": true },
+      { "id": "publicidad", "label": "Ofertas y novedades", "detail": "Productos de Seguros Andinos.", "enabled": false }
+    ]
+  }
+}

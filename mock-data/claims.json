@@ -1,0 +1,64 @@
+{
+  "_comment": "C6 · Estado de siniestros (HU-23). Las etapas indican si están completadas, en curso o pendientes; la pantalla no anticipa el resultado.",
+  "stageLabels": { "hecho": "Completada", "en-curso": "En curso", "pendiente": "Pendiente" },
+  "statusLabels": { "en-proceso": "En proceso", "pagado": "Pagado", "no-cubierto": "No cubierto" },
+  "claims": [
+    {
+      "id": "SIN-2026-0007",
+      "coverageId": "COB-02",
+      "title": "Fuga de la lavadora",
+      "description": "Se reventó la manguera de la lavadora y el agua dañó el piso de madera de la cocina.",
+      "eventDate": "2026-11-10",
+      "reportedDate": "2026-11-12",
+      "claimedAmount": 2800000,
+      "status": "en-proceso",
+      "missingDocument": {
+        "name": "Cotización de la reparación del piso",
+        "detail": "Un documento del contratista con el valor de los materiales y la mano de obra. Puede ser una foto legible o un PDF.",
+        "dueDate": "2026-11-28"
+      },
+      "stages": [
+        { "name": "Reclamación recibida", "state": "hecho", "date": "2026-11-12", "note": "Registramos tu reporte y las 6 fotos del daño." },
+        { "name": "Revisión de documentos", "state": "en-curso", "date": "2026-11-18", "note": "Falta un documento para continuar." },
+        { "name": "Visita del ajustador", "state": "pendiente", "date": null, "note": "Un ajustador revisa el daño en tu vivienda." },
+        { "name": "Evaluación", "state": "pendiente", "date": null, "note": "La aseguradora revisa el caso con lo que dice tu póliza." },
+        { "name": "Respuesta", "state": "pendiente", "date": null, "note": "Te informamos la decisión y, si aplica, el pago." }
+      ]
+    },
+    {
+      "id": "SIN-2026-0003",
+      "coverageId": "COB-05",
+      "title": "Plomero por fuga en el baño",
+      "description": "Servicio de asistencia de plomería por una fuga bajo el lavamanos.",
+      "eventDate": "2026-05-28",
+      "reportedDate": "2026-05-28",
+      "claimedAmount": 180000,
+      "paidAmount": 150000,
+      "status": "pagado",
+      "resolution": "Pagamos el servicio. Tú pagaste el copago de $30.000 directamente al plomero.",
+      "stages": [
+        { "name": "Reclamación recibida", "state": "hecho", "date": "2026-05-28", "note": "Solicitud por la línea de asistencia." },
+        { "name": "Servicio prestado", "state": "hecho", "date": "2026-05-29", "note": "El plomero reparó la fuga." },
+        { "name": "Respuesta", "state": "hecho", "date": "2026-06-03", "note": "Reclamación cerrada y pagada." }
+      ]
+    },
+    {
+      "id": "SIN-2026-0001",
+      "coverageId": "COB-02",
+      "title": "Humedad en la pared del patio",
+      "description": "Mancha de humedad en la pared que da al patio, aparecida durante varios meses.",
+      "eventDate": "2026-02-20",
+      "reportedDate": "2026-02-22",
+      "claimedAmount": 2200000,
+      "status": "no-cubierto",
+      "exclusionId": "EXC-02",
+      "resolution": "El ajustador encontró que el agua entraba por una canal tapada. Ese caso está en la exclusión «Filtraciones por falta de mantenimiento».",
+      "stages": [
+        { "name": "Reclamación recibida", "state": "hecho", "date": "2026-02-22", "note": "Registramos tu reporte." },
+        { "name": "Visita del ajustador", "state": "hecho", "date": "2026-02-27", "note": "Revisión del daño en la vivienda." },
+        { "name": "Evaluación", "state": "hecho", "date": "2026-03-04", "note": "Revisión con lo que dice tu póliza." },
+        { "name": "Respuesta", "state": "hecho", "date": "2026-03-06", "note": "Te enviamos la decisión por escrito." }
+      ]
+    }
+  ]
+}
