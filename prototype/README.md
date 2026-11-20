@@ -12,6 +12,17 @@ npx serve .
 
 Luego abrir `http://localhost:3000/prototype/` (la app) o `http://localhost:3000/prototype/presentacion.html` (modo presentación). Sin Node también sirve `python3 -m http.server` desde la raíz y abrir `http://localhost:8000/prototype/`.
 
+## Despliegue
+
+El workflow `.github/workflows/deploy-prototype.yml` publica el prototipo en GitHub Pages cada vez que cambian `prototype/`, `mock-data/` o `content/` en `main` (también se puede lanzar a mano desde la pestaña *Actions*, "Desplegar prototipo" → *Run workflow*). Valida que los JSON y el JavaScript sean correctos, copia esas tres carpetas a un sitio estático y lo despliega.
+
+Configuración, una sola vez: en GitHub, *Settings → Pages → Build and deployment → Source*: **GitHub Actions**.
+
+Direcciones publicadas:
+
+- Presentación: `https://estebanp22.github.io/monokera/` (redirige a `prototype/presentacion.html`)
+- App: `https://estebanp22.github.io/monokera/prototype/`
+
 ## Modo presentación
 
 `presentacion.html` muestra la app dentro de un marco de teléfono, con el recorrido de la exposición a la izquierda: cada paso indica la capacidad (C1–C6), las historias que cubre y qué mostrar. El teléfono sigue siendo interactivo. "Reiniciar datos" devuelve los avisos y reclamaciones a su estado inicial.
