@@ -1,10 +1,12 @@
 // Capa de datos mock. Más adelante se reemplaza por los adaptadores reales
-// (PolicyProvider, ContentProvider, SimulationProvider).
+// (PolicyProvider, ContentProvider, SimulationProvider, NotificationProvider).
 const SOURCES = {
   policy: "../mock-data/policy.json",
   simulation: "../mock-data/simulation.json",
   content: "../content/policy-content.json",
   education: "../content/education.json",
+  notifications: "../mock-data/notifications.json",
+  claims: "../mock-data/claims.json",
 };
 
 const cache = {};
@@ -60,6 +62,30 @@ export async function getEducation(placement) {
   const { messages } = await load("education");
   return messages.find((m) => m.placement === placement);
 }
+
+// C6 · Notificaciones. El estado (leídas, preferencias) vive en memoria mientras dura la sesión
+// del prototipo: así se ve el cambio al navegar sin necesitar un backend.
+export async function getNotifications() {
+  const data = await load("notifications");
+  data.notifications.sort((a, b) => b.date.localeCompare(a.date));
+  return data;
+}
+
+export async function unreadCount() {
+  const { notifications } = await getNotifications();
+  return notifications.filter((n) => !n.read).length;
+}
+
+export async function getClaims() {
+  return load("claims");
+}
+
+export async function getClaim(id) {
+  const data = await load("claims");
+  return { ...data, claim: data.claims.find((c) => c.id === id) };
+}
+
+export { parseIso, toIso, today, DAY };
 
 export function formatMoney(value, currency = "COP") {
   return new Intl.NumberFormat("es-CO", { style: "currency", currency, maximumFractionDigits: 0 }).format(value);

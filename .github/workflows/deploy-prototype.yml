@@ -1,0 +1,67 @@
+# Despliegue del prototipo navegable en GitHub Pages.
+# Valida los datos, arma el sitio estático y lo publica. Sin dependencias ni paso de build.
+name: Desplegar prototipo
+
+on:
+  push:
+    branches: [main]
+    paths: [prototype/**, mock-data/**, content/**, .github/workflows/deploy-prototype.yml]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validar JSON de datos y contenido
+        run: |
+          for f in mock-data/*.json content/*.json; do
+            python3 -m json.tool "$f" > /dev/null && echo "ok  $f"
+          done
+
+      - name: Validar sintaxis de JavaScript
+        run: |
+          for f in $(find prototype/js -name '*.js'); do
+            node --check "$f" && echo "ok  $f"
+          done
+
+      - name: Armar el sitio
+        run: |
+          mkdir -p _site
+          cp -r prototype mock-data content _site/
+          cat > _site/index.html <<'HTML'
+          <!doctype html>
+          <html lang="es"><head><meta charset="utf-8">
+          <meta http-equiv="refresh" content="0; url=prototype/presentacion.html">
+          <title>Monokera · Prototipo</title></head>
+          <body><a href="prototype/presentacion.html">Ir al prototipo</a></body></html>
+          HTML
+          touch _site/.nojekyll
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}prototype/presentacion.html
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
